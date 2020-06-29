@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SortingAlgApp</class>
+ <widget class="QMainWindow" name="SortingAlgApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>807</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>807</width>
+    <height>597</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SortingAlgApp</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QWidget" name="mainContainer" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget#mainContainer{
+
+}</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QWidget" name="inputsContainer" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#inputsContainer{
+border-radius : 5px;
+background-color : LightSlateGray;
+}</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="4" column="0">
+           <widget class="QPushButton" name="pushButton_run">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Run</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="0">
+           <widget class="QWidget" name="searchContainer" native="true">
+            <property name="styleSheet">
+             <string notr="true">QWidget#searchContainer{
+
+}</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboBox_algSearch">
+               <item>
+                <property name="text">
+                 <string>LinearSearch</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>BinarySearch</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QRadioButton" name="radioButton_search">
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QWidget" name="sortContainer" native="true">
+            <property name="styleSheet">
+             <string notr="true">QWidget#sortContainer{
+
+}</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboBox_alg">
+               <item>
+                <property name="text">
+                 <string>QuickSort</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>MergeSort</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>BubbleSort</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>HeapSort</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QRadioButton" name="radioButton_sort">
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_inputData">
+            <property name="styleSheet">
+             <string notr="true">background-color : rgb(239, 244, 245)</string>
+            </property>
+            <property name="text">
+             <string>INPUT DATA</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QWidget" name="outputsContainer" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget#outputsContainer{
+border-radius : 5px;
+background-color : LightSlateGray;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QWidget" name="dataContainer" native="true">
+            <property name="styleSheet">
+             <string notr="true">QWidget#dataContainer{
+background-color : lightgrey;
+border-radius : 2px;
+}</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_totalTime">
+               <property name="text">
+                <string>Total Time</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="label_value_numElements">
+               <property name="styleSheet">
+                <string notr="true">QWidget#label_value_numElements{
+
+border : 1px solid lightgrey;
+background-color : rgb(247, 250, 252);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_numElements">
+               <property name="text">
+                <string>Number of Elements</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_value_totalTime">
+               <property name="styleSheet">
+                <string notr="true">QWidget#label_value_totalTime{
+border : 1px solid lightgrey;
+background-color : rgb(247, 250, 252);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="displayContainer" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>400</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_timeTable">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QWidget#label_timeTable
+{
+background-color : rgb(247, 250, 252);
+border-radius : 2px;
+border : 1px solid lightgrey;
+}</string>
+               </property>
+               <property name="text">
+                <string>Time Table</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="bufferContainer" native="true">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QWidget#bufferContainer{
+background-color : lightgrey;
+border-radius : 2px;
+}</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <widget class="QLabel" name="label_bufferSize">
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Buffer Size</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="spinBox_bufferSize">
+                  <property name="maximumSize">
+                   <size>
+                    <width>50</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="minimum">
+                   <number>1</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="customTableContainer" native="true">
+               <property name="styleSheet">
+                <string notr="true">QWidget#customTableContainer{
+
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>807</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
